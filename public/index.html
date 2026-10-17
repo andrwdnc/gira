@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gira</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="banner" class="banner" role="alert" hidden>
+    <span id="banner-texto"></span>
+    <button type="button" id="banner-cerrar" class="banner__cerrar" aria-label="Cerrar aviso">×</button>
+  </div>
+
+  <header class="cabecera">
+    <h1 class="cabecera__titulo">Gira</h1>
+    <div class="cabecera__controles">
+      <label class="campo">
+        <span class="campo__etiqueta">Proyecto</span>
+        <select id="selector-proyecto"></select>
+      </label>
+      <button type="button" id="btn-nuevo-proyecto" class="boton">Nuevo proyecto</button>
+      <button type="button" id="btn-renombrar" class="boton">Renombrar</button>
+      <button type="button" id="btn-eliminar" class="boton">Eliminar</button>
+      <button type="button" id="btn-recargar" class="boton">Recargar desde disco</button>
+      <label class="campo">
+        <span class="campo__etiqueta">Etiqueta</span>
+        <select id="filtro-etiqueta"></select>
+      </label>
+      <button type="button" id="btn-nueva-tarea" class="boton boton--principal">Nueva tarea</button>
+    </div>
+  </header>
+
+  <main id="tablero" class="tablero"></main>
+
+  <dialog id="dialogo-proyecto" class="dialogo">
+    <form id="form-proyecto" method="dialog">
+      <h2 id="dialogo-proyecto-titulo">Proyecto</h2>
+      <label class="campo">
+        <span class="campo__etiqueta">Nombre</span>
+        <input id="input-nombre-proyecto" type="text" maxlength="80" required>
+      </label>
+      <p id="error-proyecto" class="dialogo__error" hidden></p>
+      <menu class="dialogo__acciones">
+        <button type="button" id="btn-cancelar-proyecto" class="boton">Cancelar</button>
+        <button type="submit" class="boton boton--principal">Guardar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="dialogo-tarea" class="dialogo">
+    <form id="form-tarea" method="dialog">
+      <h2 id="dialogo-tarea-titulo">Tarea</h2>
+      <label class="campo">
+        <span class="campo__etiqueta">Título</span>
+        <input id="input-titulo" type="text" maxlength="200" required>
+      </label>
+      <label class="campo">
+        <span class="campo__etiqueta">Descripción</span>
+        <textarea id="input-descripcion" rows="3" maxlength="2000"></textarea>
+      </label>
+      <label class="campo">
+        <span class="campo__etiqueta">Etiquetas (separadas por comas)</span>
+        <input id="input-etiquetas" type="text" maxlength="400">
+      </label>
+      <p id="error-tarea" class="dialogo__error" hidden></p>
+      <menu class="dialogo__acciones">
+        <button type="button" id="btn-cancelar-tarea" class="boton">Cancelar</button>
+        <button type="submit" class="boton boton--principal">Guardar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <noscript>Esta aplicación necesita JavaScript para funcionar.</noscript>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
