@@ -1,0 +1,19 @@
+{
+  "id": "53abba7d-1be3-4e38-9ff7-9ca43268d709",
+  "nombre": "Nest",
+  "creado": "2026-10-17T12:13:28.453Z",
+  "columnas": {
+    "pendiente": [
+      {
+        "id": "facffa37-8dea-4644-9549-b6e1a4304157",
+        "titulo": "Guardar gasto",
+        "descripcion": "A la hora de añadir un nuevo gasto, el boton de guardar no activa ningun spinner de carga",
+        "etiquetas": [],
+        "creada": "2026-10-17T12:14:25.213Z",
+        "actualizada": "2026-10-17T12:14:31.544Z"
+      }
+    ],
+    "en_desarrollo": [],
+    "finalizada": []
+  }
+}
